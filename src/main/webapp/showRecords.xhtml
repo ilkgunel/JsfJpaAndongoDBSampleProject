@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:dataTable value="#{getRecordsBean.personList}" var="person">
+                <p:column headerText="İsim">
+                    <h:outputText value="#{person.name}" />
+                </p:column>
+
+                <p:column headerText="Soyisim">
+                    <h:outputText value="#{person.surname}"/>
+                </p:column>
+
+                <p:column headerText="Telefon Numarası">
+                    <h:outputText value="#{person.phoneNumber}"/>
+                </p:column>
+
+                <p:column headerText="Doğum Tarihi">
+                    <p:outputLabel value="#{person.birthDate}">
+                        <f:convertDateTime pattern="dd-MM-yyyy"/>
+                    </p:outputLabel>
+                </p:column>
+                
+                <p:column headerText="Cadde">
+                    <p:outputLabel value="#{person.address.street}"/>
+                </p:column>
+                
+                <p:column headerText="Mahalle">
+                    <p:outputLabel value="#{person.address.neighborhood}"/>
+                </p:column>
+                
+                <p:column headerText="İlçe">
+                    <p:outputLabel value="#{person.address.district}"/>
+                </p:column>
+                
+                <p:column headerText="İl">
+                    <p:outputLabel value="#{person.address.city}"/>
+                </p:column>
+            </p:dataTable>
+        </h:form>
+    </h:body>
+</html>
+

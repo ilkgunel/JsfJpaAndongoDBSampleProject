@@ -1,0 +1,5 @@
+com/ilkaygunel/jpaandmongodb/bean/ManagedBeanClass.class
+com/ilkaygunel/jpaandmongodb/filter/TurkishCharacterFilter.class
+com/ilkaygunel/jpaandmongodb/entity/Person.class
+com/ilkaygunel/jpaandmongodb/entity/Address.class
+com/ilkaygunel/jpaandmongodb/bean/GetRecordsBean.class
